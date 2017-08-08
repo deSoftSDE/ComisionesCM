@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://deSoft.dSWinNetSvc" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioDSW" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://deSoft.dSWinNetSvc" location="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="basic" type="i0:IServiciodSWin">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IniciarDatosConexion">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/IniciarDatosConexion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginBasic">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LoginBasic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarParametrosUsuarioEmpresa">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/CargarParametrosUsuarioEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerLista">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerLista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerUno">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerUno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerVersionTabla">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerVersionTabla" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarProcedimiento">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcedimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarProcedimientoEscalar">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcedimientoEscalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarProcListaIds">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcListaIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDatosUsuarioAplicacion">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/ModificarDatosUsuarioAplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstado">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/CambiarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearGTINAlternativo">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/CrearGTINAlternativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerDocumentosExternos">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDocumentosExternos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarDocumentoExterno">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarDocumentoExterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerDocumento">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarEmpresa">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoIva">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoIva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerTipoIvaXId">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerTipoIvaXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarRegimenIva">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarRegimenIva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarPais">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarPais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarProvincia">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarMunicipio">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMunicipio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarCriterioHomolog">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCriterioHomolog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoEfecto">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoEfecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoVia">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoVia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoCanalCom">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoCanalCom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoContacto">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarMotivo">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMotivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoCuentaBancaria">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoCuentaBancaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarBanco">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerEmpresaXId">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerEmpresaXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerParametrosEmpresaXCif">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerParametrosEmpresaXCif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerParametrosEmpresaXIdEmpresa">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerParametrosEmpresaXIdEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerMunicipioXId">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerMunicipioXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerProvinciaXId">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerProvinciaXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerBancoXCodigo">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerBancoXCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarMenu">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarGuiaEnlace">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarGuiaEnlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerGuiaEnlaceXId">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerGuiaEnlaceXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoVehiculo">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoVehiculo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoDocumentoIdentidad">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoDocumentoIdentidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarPuestoTrabajo">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarPuestoTrabajo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarSerieDocumento">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarSerieDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarFormaPago">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarFormaPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarFabricante">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarFabricante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarCuentaBancaria">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCuentaBancaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarCargoImpuesto">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCargoImpuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarDepartamento">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarDepartamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarVehiculo">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarVehiculo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarProyectoAnalitico">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarProyectoAnalitico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarGrupoGastos">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarGrupoGastos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerGrupoGastosXId">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerGrupoGastosXId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoDocuExt">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoDocuExt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvarAdr">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarAdr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerDesglosAnaliticoDoc">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDesglosAnaliticoDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerLogDocumento">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerLogDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArticuloXGTIN">
+      <soap:operation soapAction="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerArticuloXGTIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioDSW">
+    <wsdl:port name="basic" binding="tns:basic">
+      <soap:address location="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

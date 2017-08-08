@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/dsCore.Security" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/dsCore.Security" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndPoint" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdAplicacion" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdDelegacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEjercicio" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEmpleado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdInstalacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Instalacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Restricciones" nillable="true" type="tns:ArrayOfRestriccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="ArrayOfRestriccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Restriccion" nillable="true" type="tns:Restriccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRestriccion" nillable="true" type="tns:ArrayOfRestriccion" />
+  <xs:complexType name="Restriccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdAplicacion" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdRestringido" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="PermisoRestringido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoRestriccion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Restriccion" nillable="true" type="tns:Restriccion" />
+</xs:schema>

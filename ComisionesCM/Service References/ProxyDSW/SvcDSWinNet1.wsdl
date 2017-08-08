@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://deSoft.dSWinNetSvc" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://deSoft.dSWinNetSvc" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://deSoft.dSWinNetSvc/Imports">
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd0" namespace="http://deSoft.dSWinNetSvc" />
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/dsCore.Security" />
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" />
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/dsCore.Tipos" />
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/dsCore.Comun" />
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/dsCore.Buscador" />
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiciodSWin_IniciarDatosConexion_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarDatosConexion" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_IniciarDatosConexion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarDatosConexionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LoginBasic_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginBasic" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LoginBasic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginBasicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_CargarParametrosUsuarioEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarParametrosUsuarioEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_CargarParametrosUsuarioEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarParametrosUsuarioEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_ValidarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_ValidarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerLista_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerLista" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerLista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerUno_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerUno" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerUno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerUnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerVersionTabla_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerVersionTabla" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerVersionTabla_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerVersionTablaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_EjecutarProcedimiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarProcedimiento" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_EjecutarProcedimiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarProcedimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_EjecutarProcedimientoEscalar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarProcedimientoEscalar" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_EjecutarProcedimientoEscalar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarProcedimientoEscalarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_EjecutarProcListaIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarProcListaIds" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_EjecutarProcListaIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarProcListaIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_ModificarDatosUsuarioAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDatosUsuarioAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_ModificarDatosUsuarioAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarDatosUsuarioAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_CambiarEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstado" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_CambiarEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_CrearGTINAlternativo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearGTINAlternativo" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_CrearGTINAlternativo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearGTINAlternativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerDocumentosExternos_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerDocumentosExternos" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerDocumentosExternos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerDocumentosExternosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarDocumentoExterno_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarDocumentoExterno" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarDocumentoExterno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarDocumentoExternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoIva_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoIva" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoIva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoIvaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerTipoIvaXId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerTipoIvaXId" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerTipoIvaXId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerTipoIvaXIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarRegimenIva_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarRegimenIva" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarRegimenIva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarRegimenIvaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarPais_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarPais" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarPais_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarPaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarMunicipio_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarMunicipio" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarMunicipio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarMunicipioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarCriterioHomolog_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarCriterioHomolog" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarCriterioHomolog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarCriterioHomologResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoEfecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoEfecto" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoEfecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoEfectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoVia_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoVia" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoVia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoViaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoCanalCom_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoCanalCom" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoCanalCom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoCanalComResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoContacto" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarMotivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarMotivo" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarMotivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarMotivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoCuentaBancaria_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoCuentaBancaria" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoCuentaBancaria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoCuentaBancariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarBanco_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarBanco" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarBanco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerEmpresaXId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerEmpresaXId" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerEmpresaXId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerEmpresaXIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerParametrosEmpresaXCif_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerParametrosEmpresaXCif" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerParametrosEmpresaXCif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerParametrosEmpresaXCifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerParametrosEmpresaXIdEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerParametrosEmpresaXIdEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerParametrosEmpresaXIdEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerParametrosEmpresaXIdEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerMunicipioXId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerMunicipioXId" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerMunicipioXId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerMunicipioXIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerProvinciaXId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerProvinciaXId" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerProvinciaXId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerProvinciaXIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerBancoXCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerBancoXCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerBancoXCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerBancoXCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarMenu" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarGuiaEnlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarGuiaEnlace" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarGuiaEnlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarGuiaEnlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerGuiaEnlaceXId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerGuiaEnlaceXId" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerGuiaEnlaceXId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerGuiaEnlaceXIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoVehiculo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoVehiculo" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoVehiculo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoVehiculoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoDocumentoIdentidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoDocumentoIdentidad" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoDocumentoIdentidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoDocumentoIdentidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarPuestoTrabajo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarPuestoTrabajo" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarPuestoTrabajo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarPuestoTrabajoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarSerieDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarSerieDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarSerieDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarSerieDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarFormaPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarFormaPago" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarFormaPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarFormaPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarFabricante_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarFabricante" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarFabricante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarFabricanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarCuentaBancaria_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarCuentaBancaria" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarCuentaBancaria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarCuentaBancariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarCargoImpuesto_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarCargoImpuesto" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarCargoImpuesto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarCargoImpuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarDepartamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarDepartamento" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarDepartamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarDepartamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarVehiculo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarVehiculo" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarVehiculo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarVehiculoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarProyectoAnalitico_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarProyectoAnalitico" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarProyectoAnalitico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarProyectoAnaliticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarGrupoGastos_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarGrupoGastos" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarGrupoGastos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarGrupoGastosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerGrupoGastosXId_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerGrupoGastosXId" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerGrupoGastosXId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerGrupoGastosXIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoDocuExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoDocuExt" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarTipoDocuExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarTipoDocuExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarAdr_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarAdr" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_SalvarAdr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalvarAdrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerDesglosAnaliticoDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerDesglosAnaliticoDoc" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerDesglosAnaliticoDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerDesglosAnaliticoDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerLogDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerLogDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerLogDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerLogDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerArticuloXGTIN_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerArticuloXGTIN" />
+  </wsdl:message>
+  <wsdl:message name="IServiciodSWin_LeerArticuloXGTIN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerArticuloXGTINResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiciodSWin">
+    <wsdl:operation name="IniciarDatosConexion">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/IniciarDatosConexion" message="tns:IServiciodSWin_IniciarDatosConexion_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/IniciarDatosConexionResponse" message="tns:IServiciodSWin_IniciarDatosConexion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/Login" message="tns:IServiciodSWin_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LoginResponse" message="tns:IServiciodSWin_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginBasic">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LoginBasic" message="tns:IServiciodSWin_LoginBasic_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LoginBasicResponse" message="tns:IServiciodSWin_LoginBasic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarParametrosUsuarioEmpresa">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/CargarParametrosUsuarioEmpresa" message="tns:IServiciodSWin_CargarParametrosUsuarioEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/CargarParametrosUsuarioEmpresaResponse" message="tns:IServiciodSWin_CargarParametrosUsuarioEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarUsuario">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/ValidarUsuario" message="tns:IServiciodSWin_ValidarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/ValidarUsuarioResponse" message="tns:IServiciodSWin_ValidarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerLista">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerLista" message="tns:IServiciodSWin_LeerLista_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerListaResponse" message="tns:IServiciodSWin_LeerLista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerUno">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerUno" message="tns:IServiciodSWin_LeerUno_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerUnoResponse" message="tns:IServiciodSWin_LeerUno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerVersionTabla">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerVersionTabla" message="tns:IServiciodSWin_LeerVersionTabla_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerVersionTablaResponse" message="tns:IServiciodSWin_LeerVersionTabla_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarProcedimiento">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcedimiento" message="tns:IServiciodSWin_EjecutarProcedimiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcedimientoResponse" message="tns:IServiciodSWin_EjecutarProcedimiento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarProcedimientoEscalar">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcedimientoEscalar" message="tns:IServiciodSWin_EjecutarProcedimientoEscalar_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcedimientoEscalarResponse" message="tns:IServiciodSWin_EjecutarProcedimientoEscalar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarProcListaIds">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcListaIds" message="tns:IServiciodSWin_EjecutarProcListaIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/EjecutarProcListaIdsResponse" message="tns:IServiciodSWin_EjecutarProcListaIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDatosUsuarioAplicacion">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/ModificarDatosUsuarioAplicacion" message="tns:IServiciodSWin_ModificarDatosUsuarioAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/ModificarDatosUsuarioAplicacionResponse" message="tns:IServiciodSWin_ModificarDatosUsuarioAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstado">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/CambiarEstado" message="tns:IServiciodSWin_CambiarEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/CambiarEstadoResponse" message="tns:IServiciodSWin_CambiarEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearGTINAlternativo">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/CrearGTINAlternativo" message="tns:IServiciodSWin_CrearGTINAlternativo_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/CrearGTINAlternativoResponse" message="tns:IServiciodSWin_CrearGTINAlternativo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerDocumentosExternos">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDocumentosExternos" message="tns:IServiciodSWin_LeerDocumentosExternos_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDocumentosExternosResponse" message="tns:IServiciodSWin_LeerDocumentosExternos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarDocumentoExterno">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarDocumentoExterno" message="tns:IServiciodSWin_SalvarDocumentoExterno_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarDocumentoExternoResponse" message="tns:IServiciodSWin_SalvarDocumentoExterno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerDocumento">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDocumento" message="tns:IServiciodSWin_LeerDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDocumentoResponse" message="tns:IServiciodSWin_LeerDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarEmpresa">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarEmpresa" message="tns:IServiciodSWin_SalvarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarEmpresaResponse" message="tns:IServiciodSWin_SalvarEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoIva">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoIva" message="tns:IServiciodSWin_SalvarTipoIva_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoIvaResponse" message="tns:IServiciodSWin_SalvarTipoIva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerTipoIvaXId">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerTipoIvaXId" message="tns:IServiciodSWin_LeerTipoIvaXId_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerTipoIvaXIdResponse" message="tns:IServiciodSWin_LeerTipoIvaXId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarRegimenIva">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarRegimenIva" message="tns:IServiciodSWin_SalvarRegimenIva_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarRegimenIvaResponse" message="tns:IServiciodSWin_SalvarRegimenIva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarPais">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarPais" message="tns:IServiciodSWin_SalvarPais_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarPaisResponse" message="tns:IServiciodSWin_SalvarPais_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarProvincia">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarProvincia" message="tns:IServiciodSWin_SalvarProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarProvinciaResponse" message="tns:IServiciodSWin_SalvarProvincia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarMunicipio">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMunicipio" message="tns:IServiciodSWin_SalvarMunicipio_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMunicipioResponse" message="tns:IServiciodSWin_SalvarMunicipio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarCriterioHomolog">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCriterioHomolog" message="tns:IServiciodSWin_SalvarCriterioHomolog_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCriterioHomologResponse" message="tns:IServiciodSWin_SalvarCriterioHomolog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoEfecto">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoEfecto" message="tns:IServiciodSWin_SalvarTipoEfecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoEfectoResponse" message="tns:IServiciodSWin_SalvarTipoEfecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoVia">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoVia" message="tns:IServiciodSWin_SalvarTipoVia_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoViaResponse" message="tns:IServiciodSWin_SalvarTipoVia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoCanalCom">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoCanalCom" message="tns:IServiciodSWin_SalvarTipoCanalCom_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoCanalComResponse" message="tns:IServiciodSWin_SalvarTipoCanalCom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoContacto">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoContacto" message="tns:IServiciodSWin_SalvarTipoContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoContactoResponse" message="tns:IServiciodSWin_SalvarTipoContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarMotivo">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMotivo" message="tns:IServiciodSWin_SalvarMotivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMotivoResponse" message="tns:IServiciodSWin_SalvarMotivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoCuentaBancaria">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoCuentaBancaria" message="tns:IServiciodSWin_SalvarTipoCuentaBancaria_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoCuentaBancariaResponse" message="tns:IServiciodSWin_SalvarTipoCuentaBancaria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarBanco">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarBanco" message="tns:IServiciodSWin_SalvarBanco_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarBancoResponse" message="tns:IServiciodSWin_SalvarBanco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerEmpresaXId">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerEmpresaXId" message="tns:IServiciodSWin_LeerEmpresaXId_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerEmpresaXIdResponse" message="tns:IServiciodSWin_LeerEmpresaXId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerParametrosEmpresaXCif">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerParametrosEmpresaXCif" message="tns:IServiciodSWin_LeerParametrosEmpresaXCif_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerParametrosEmpresaXCifResponse" message="tns:IServiciodSWin_LeerParametrosEmpresaXCif_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerParametrosEmpresaXIdEmpresa">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerParametrosEmpresaXIdEmpresa" message="tns:IServiciodSWin_LeerParametrosEmpresaXIdEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerParametrosEmpresaXIdEmpresaResponse" message="tns:IServiciodSWin_LeerParametrosEmpresaXIdEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerMunicipioXId">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerMunicipioXId" message="tns:IServiciodSWin_LeerMunicipioXId_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerMunicipioXIdResponse" message="tns:IServiciodSWin_LeerMunicipioXId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerProvinciaXId">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerProvinciaXId" message="tns:IServiciodSWin_LeerProvinciaXId_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerProvinciaXIdResponse" message="tns:IServiciodSWin_LeerProvinciaXId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerBancoXCodigo">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerBancoXCodigo" message="tns:IServiciodSWin_LeerBancoXCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerBancoXCodigoResponse" message="tns:IServiciodSWin_LeerBancoXCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarMenu">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMenu" message="tns:IServiciodSWin_SalvarMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarMenuResponse" message="tns:IServiciodSWin_SalvarMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarGuiaEnlace">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarGuiaEnlace" message="tns:IServiciodSWin_SalvarGuiaEnlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarGuiaEnlaceResponse" message="tns:IServiciodSWin_SalvarGuiaEnlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerGuiaEnlaceXId">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerGuiaEnlaceXId" message="tns:IServiciodSWin_LeerGuiaEnlaceXId_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerGuiaEnlaceXIdResponse" message="tns:IServiciodSWin_LeerGuiaEnlaceXId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoVehiculo">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoVehiculo" message="tns:IServiciodSWin_SalvarTipoVehiculo_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoVehiculoResponse" message="tns:IServiciodSWin_SalvarTipoVehiculo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoDocumentoIdentidad">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoDocumentoIdentidad" message="tns:IServiciodSWin_SalvarTipoDocumentoIdentidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoDocumentoIdentidadResponse" message="tns:IServiciodSWin_SalvarTipoDocumentoIdentidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarPuestoTrabajo">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarPuestoTrabajo" message="tns:IServiciodSWin_SalvarPuestoTrabajo_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarPuestoTrabajoResponse" message="tns:IServiciodSWin_SalvarPuestoTrabajo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarSerieDocumento">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarSerieDocumento" message="tns:IServiciodSWin_SalvarSerieDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarSerieDocumentoResponse" message="tns:IServiciodSWin_SalvarSerieDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarFormaPago">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarFormaPago" message="tns:IServiciodSWin_SalvarFormaPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarFormaPagoResponse" message="tns:IServiciodSWin_SalvarFormaPago_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarFabricante">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarFabricante" message="tns:IServiciodSWin_SalvarFabricante_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarFabricanteResponse" message="tns:IServiciodSWin_SalvarFabricante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarCuentaBancaria">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCuentaBancaria" message="tns:IServiciodSWin_SalvarCuentaBancaria_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCuentaBancariaResponse" message="tns:IServiciodSWin_SalvarCuentaBancaria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarCargoImpuesto">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCargoImpuesto" message="tns:IServiciodSWin_SalvarCargoImpuesto_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarCargoImpuestoResponse" message="tns:IServiciodSWin_SalvarCargoImpuesto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarDepartamento">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarDepartamento" message="tns:IServiciodSWin_SalvarDepartamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarDepartamentoResponse" message="tns:IServiciodSWin_SalvarDepartamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarVehiculo">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarVehiculo" message="tns:IServiciodSWin_SalvarVehiculo_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarVehiculoResponse" message="tns:IServiciodSWin_SalvarVehiculo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarProyectoAnalitico">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarProyectoAnalitico" message="tns:IServiciodSWin_SalvarProyectoAnalitico_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarProyectoAnaliticoResponse" message="tns:IServiciodSWin_SalvarProyectoAnalitico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarGrupoGastos">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarGrupoGastos" message="tns:IServiciodSWin_SalvarGrupoGastos_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarGrupoGastosResponse" message="tns:IServiciodSWin_SalvarGrupoGastos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerGrupoGastosXId">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerGrupoGastosXId" message="tns:IServiciodSWin_LeerGrupoGastosXId_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerGrupoGastosXIdResponse" message="tns:IServiciodSWin_LeerGrupoGastosXId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarTipoDocuExt">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoDocuExt" message="tns:IServiciodSWin_SalvarTipoDocuExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarTipoDocuExtResponse" message="tns:IServiciodSWin_SalvarTipoDocuExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvarAdr">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarAdr" message="tns:IServiciodSWin_SalvarAdr_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/SalvarAdrResponse" message="tns:IServiciodSWin_SalvarAdr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerDesglosAnaliticoDoc">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDesglosAnaliticoDoc" message="tns:IServiciodSWin_LeerDesglosAnaliticoDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerDesglosAnaliticoDocResponse" message="tns:IServiciodSWin_LeerDesglosAnaliticoDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerLogDocumento">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerLogDocumento" message="tns:IServiciodSWin_LeerLogDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerLogDocumentoResponse" message="tns:IServiciodSWin_LeerLogDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerArticuloXGTIN">
+      <wsdl:input wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerArticuloXGTIN" message="tns:IServiciodSWin_LeerArticuloXGTIN_InputMessage" />
+      <wsdl:output wsaw:Action="http://deSoft.dSWinNetSvc/IServiciodSWin/LeerArticuloXGTINResponse" message="tns:IServiciodSWin_LeerArticuloXGTIN_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

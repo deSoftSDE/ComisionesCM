@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/dsCore.Tipos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/dsCore.Tipos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:simpleType name="TTipoTransaccion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Modificacion" />
+      <xs:enumeration value="Insercion" />
+      <xs:enumeration value="Borrado" />
+      <xs:enumeration value="ModificacionH" />
+      <xs:enumeration value="Confirmacion" />
+      <xs:enumeration value="Ninguna" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TTipoTransaccion" nillable="true" type="tns:TTipoTransaccion" />
+  <xs:complexType name="LogEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Entidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Equipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdEntidad" type="xs:int" />
+      <xs:element minOccurs="0" name="IdLog" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" type="ser:guid" />
+      <xs:element minOccurs="0" name="Identificador" type="xs:int" />
+      <xs:element minOccurs="0" name="Motivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogEntidad" nillable="true" type="tns:LogEntidad" />
+  <xs:complexType name="Procedimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListaParametros" nillable="true" type="tns:ArrayOfParametroProc" />
+      <xs:element minOccurs="0" name="NombreProcedimiento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Procedimiento" nillable="true" type="tns:Procedimiento" />
+  <xs:complexType name="ArrayOfParametroProc">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParametroProc" nillable="true" type="tns:ParametroProc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParametroProc" nillable="true" type="tns:ArrayOfParametroProc" />
+  <xs:complexType name="ParametroProc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NombreParametro" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="TipoDato" type="q1:DbType" />
+      <xs:element minOccurs="0" name="TipoParametro" type="tns:TTipoParametro" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametroProc" nillable="true" type="tns:ParametroProc" />
+  <xs:simpleType name="TTipoParametro">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Entrada" />
+      <xs:enumeration value="Salida" />
+      <xs:enumeration value="EntradaSalida" />
+      <xs:enumeration value="Xml" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TTipoParametro" nillable="true" type="tns:TTipoParametro" />
+  <xs:complexType name="ResultadoIM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identidad" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultadoIM" nillable="true" type="tns:ResultadoIM" />
+  <xs:complexType name="ArrayOfLogEntidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogEntidad" nillable="true" type="tns:LogEntidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogEntidad" nillable="true" type="tns:ArrayOfLogEntidad" />
+</xs:schema>

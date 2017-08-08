@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9681EE90-4101-44F1-A154-73398D4D11A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComisionesCM</RootNamespace>
+    <AssemblyName>ComisionesCM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="dsCore.Buscador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Proyectos\librerias\Release\dsCore.Buscador.dll</HintPath>
+    </Reference>
+    <Reference Include="dsCore.Comun, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Proyectos\librerias\Release\dsCore.Comun.dll</HintPath>
+    </Reference>
+    <Reference Include="dsCore.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Proyectos\librerias\Release\dsCore.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="dsCore.Layout, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Proyectos\librerias\Release\dsCore.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="dsCore.ManejadorListaObjetos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Proyectos\Librerias\Release\dsCore.ManejadorListaObjetos.dll</HintPath>
+    </Reference>
+    <Reference Include="dsCore.Security, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Proyectos\librerias\Release\dsCore.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="dsCore.Tipos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Proyectos\librerias\Release\dsCore.Tipos.dll</HintPath>
+    </Reference>
+    <Reference Include="dsCore.Utiles, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Proyectos\Librerias\Release\dsCore.Utiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Entidades.dSWin, Version=2.0.0.1, Culture=neutral, PublicKeyToken=c54a3b4f6d3c6bdb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\inetpub\wwwroot\SvcConsultasDSW\bin\Entidades.dSWin.dll</HintPath>
+    </Reference>
+    <Reference Include="EntidadesConsultas, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\inetpub\wwwroot\SvcConsultasDSW\bin\EntidadesConsultas.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AyudasBusquedas.cs" />
+    <Compile Include="ClasesAuxiliares.cs" />
+    <Compile Include="ComisionesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComisionesForm.Designer.cs">
+      <DependentUpon>ComisionesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas_frm.Designer.cs">
+      <DependentUpon>Consultas_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultasArti_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultasArti_frm.Designer.cs">
+      <DependentUpon>ConsultasArti_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridArticulos_ctrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridArticulos_ctrl.Designer.cs">
+      <DependentUpon>GridArticulos_ctrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntidadesGlobales.cs" />
+    <Compile Include="GridVendedor_ctrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridVendedor_ctrl.Designer.cs">
+      <DependentUpon>GridVendedor_ctrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locker.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManejoExcepciones.cs" />
+    <Compile Include="Parametros.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ProxyAuxiliar\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProxyConsultas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProxyDSW\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="VentasVendedor.cs" />
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitFormCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitFormCancel.Designer.cs">
+      <DependentUpon>WaitFormCancel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ComisionesForm.resx">
+      <DependentUpon>ComisionesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas_frm.resx">
+      <DependentUpon>Consultas_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultasArti_frm.resx">
+      <DependentUpon>ConsultasArti_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridArticulos_ctrl.resx">
+      <DependentUpon>GridArticulos_ctrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridVendedor_ctrl.resx">
+      <DependentUpon>GridVendedor_ctrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitFormCancel.resx">
+      <DependentUpon>WaitFormCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.AlbaranVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ArticuloIncorporable.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Banco.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.BuscaArticulo.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.CabComision.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.CantidadesRepartidor.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Cliente.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Comision.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ComisionArti.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ConsultaAlbaranVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ConsultaCliente.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ConsultaDocumentoVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ConsultaSQL.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.DesgloseAnalitico.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.DetalleRutaReparto.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.DetalleSituacionPedidoArticulo.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.DomicilioCliente.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Empleado.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.EmpleadoVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Empresa.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.EnlaceContabilidad.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.EquipoVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Facturacion.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.FacturaVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.GrupoClientes.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.GrupoGastos.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.GuiaEnlaceCab.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ImagenArticulo.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.IncidenciaEnlaceContabilidad.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Informe.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.InfVentasClientes.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LayoutRejilla.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaAlbaranVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaComercial.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaConsultaVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaNecesidades.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaPedidoReparto.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaPedidoVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaPlantillaPedido.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaPrecio.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaPrecioCoste.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaPreparacion.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaSalidaVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaServicio.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineasTarifaArticulo.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaTarCli.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaTarifa.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LineaTarifaProveedor.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LinStockAV.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.LiquidacionComisiones.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ListaFacturas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Menu.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.MunicipioCompleto.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Opcion.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ParamEmpreUsu.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PartidaConStock.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PedidoRemoto.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PedidoReparto.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PedidoRepartoConLineas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PedidoVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PlantillaPedido.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PrecioReferencia.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PresupuestoVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PromocionArticulo.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.PromocionVentas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Provincia.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ReglaComV.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.RejillasClasificadas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Reparto.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.RepartoAb.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.RepartoConLineas.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ResIMLP.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.Ruta.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.ServicioPedido.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.SituacionComision.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.SituacionEnvasesV.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.SituacionPedidoArticulo.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.SolCargaAV.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.TarifaPrecios.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.TipoImpIva.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.TipoNumSerie.datasource" />
+    <None Include="Properties\DataSources\deSoft.dSWin.Entidades.TipoPartida.datasource" />
+    <None Include="Properties\DataSources\dsCore.Buscador.ResultadoBusqueda.datasource" />
+    <None Include="Properties\DataSources\dsCore.Comun.DocumentoExterno.datasource" />
+    <None Include="Properties\DataSources\dsCore.Comun.DocumentoExterno1.datasource" />
+    <None Include="Properties\DataSources\dsCore.Comun.ResultadoExisteRelacion.datasource" />
+    <None Include="Properties\DataSources\dsCore.Comun.ResultadoIM.datasource" />
+    <None Include="Properties\DataSources\dsCore.Security.LogEntidad.datasource" />
+    <None Include="Properties\DataSources\dsCore.Security.Usuario.datasource" />
+    <None Include="Properties\DataSources\dsCore.Tipos.LogEntidad.datasource" />
+    <None Include="Properties\DataSources\dsCore.Tipos.ResultadoIM.datasource" />
+    <None Include="Properties\DataSources\EntidadesConsultas.ComisionRep.datasource" />
+    <None Include="Properties\DataSources\EntidadesConsultas.CompVC.datasource" />
+    <None Include="Properties\DataSources\EntidadesConsultas.IncidenciaReparto.datasource" />
+    <None Include="Properties\DataSources\EntidadesConsultas.IncidenciaVentas.datasource" />
+    <None Include="Properties\DataSources\EntidadesConsultas.InfVentasClientesD.datasource" />
+    <None Include="Properties\DataSources\EntidadesConsultas.VentasArti.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ProxyAuxiliar\ServicioDSW1.wsdl" />
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin1.wsdl" />
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin111.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin1110.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin112.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin113.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin114.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin115.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin116.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin117.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin118.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin119.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyConsultas\SvcConsultasDSW.wsdl" />
+    <None Include="Service References\ProxyConsultas\SvcConsultasDSW.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyConsultas\SvcConsultasDSW1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyConsultas\SvcConsultasDSW2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyConsultas\SvcConsultasDSW3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\ServicioDSW1.wsdl" />
+    <None Include="Service References\ProxyDSW\SvcDSWinNet1.wsdl" />
+    <None Include="Service References\ProxyDSW\SvcDSWinNet9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet91.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet92.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet93.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet94.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet95.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet96.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet97.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet98.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ProxyAuxiliar\" />
+    <WCFMetadataStorage Include="Service References\ProxyConsultas\" />
+    <WCFMetadataStorage Include="Service References\ProxyDSW\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyDSW\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyDSW\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyDSW\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyAuxiliar\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyAuxiliar\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyAuxiliar\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyAuxiliar\SvcAuxiliarDSWin1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyDSW\SvcDSWinNet1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyConsultas\SvcConsultasDSW.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyConsultas\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyConsultas\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyConsultas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07b88ea8-edf1-4231-9c61-9b74a2018238" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/SvcConsultasDSW/SvcConsultasDSW.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SvcConsultasDSW.wsdl" MetadataType="Wsdl" ID="7040aaa8-f357-49e0-8431-66d73198e8d1" SourceId="1" SourceUrl="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?wsdl" />
+    <MetadataFile FileName="SvcConsultasDSW.xsd" MetadataType="Schema" ID="e43608b8-1190-4364-929e-0fdd47d7d090" SourceId="1" SourceUrl="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd0" />
+    <MetadataFile FileName="SvcConsultasDSW.disco" MetadataType="Disco" ID="8a65446b-640a-4a0e-862b-03cb919ea4b3" SourceId="1" SourceUrl="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?disco" />
+    <MetadataFile FileName="SvcConsultasDSW1.xsd" MetadataType="Schema" ID="35654ccf-9d9c-450c-9f00-166bb346c60f" SourceId="1" SourceUrl="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd2" />
+    <MetadataFile FileName="SvcConsultasDSW2.xsd" MetadataType="Schema" ID="6183f1b8-4dbc-49f0-8f4e-7a5cc1847dd8" SourceId="1" SourceUrl="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd1" />
+    <MetadataFile FileName="SvcConsultasDSW3.xsd" MetadataType="Schema" ID="9004f5a6-0717-4f74-a9e5-5e004f01cc64" SourceId="1" SourceUrl="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

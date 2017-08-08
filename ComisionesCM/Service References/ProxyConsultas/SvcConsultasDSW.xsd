@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" />
+  <xs:import schemaLocation="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EntidadesConsultas" />
+  <xs:element name="IniciarDatosConexion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="datosCon" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarDatosConexionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerClientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerClientesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerClientesResult" nillable="true" type="q1:ArrayOfConsultaCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerArticulos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerArticulosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerArticulosResult" nillable="true" type="q2:ArrayOfBuscaArticulo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearComisiones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="fecIni" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idVendedor" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearComisionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="CrearComisionesResult" nillable="true" type="q3:ArrayOfComisionArti" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerCantidadesReparto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="fecIni" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idRepartidor" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerCantidadesRepartoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerCantidadesRepartoResult" nillable="true" type="q4:ArrayOfCantidadesRepartidor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerIncidenciasVentas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="fecIni" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerIncidenciasVentasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EntidadesConsultas" minOccurs="0" name="LeerIncidenciasVentasResult" nillable="true" type="q5:ArrayOfIncidenciaVentas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerIncidenciasRepartos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="fecIni" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerIncidenciasRepartosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EntidadesConsultas" minOccurs="0" name="LeerIncidenciasRepartosResult" nillable="true" type="q6:ArrayOfIncidenciaReparto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerVentas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="fecIni" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerVentasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerVentasResult" nillable="true" type="q7:ArrayOfInfVentasClientes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerVentasArti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="fecIni" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="vendedores" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="porVendedor" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerVentasArtiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EntidadesConsultas" minOccurs="0" name="LeerVentasArtiResult" nillable="true" type="q8:ArrayOfVentasArti" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerComisionesRepDet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EntidadesConsultas" minOccurs="0" name="filtro" nillable="true" type="q9:FiltroCon" />
+        <xs:element minOccurs="0" name="tamPag" type="xs:short" />
+        <xs:element minOccurs="0" name="idInicio" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="tablaEntrada" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerComisionesRepDetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EntidadesConsultas" minOccurs="0" name="LeerComisionesRepDetResult" nillable="true" type="q10:ArrayOfComisionRep" />
+        <xs:element minOccurs="0" name="nombreTabla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerCompVC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EntidadesConsultas" minOccurs="0" name="filtro" nillable="true" type="q11:FiltroCon" />
+        <xs:element minOccurs="0" name="tamPag" type="xs:short" />
+        <xs:element minOccurs="0" name="idInicio" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="tablaEntrada" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerCompVCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EntidadesConsultas" minOccurs="0" name="LeerCompVCResult" nillable="true" type="q12:ArrayOfCompVC" />
+        <xs:element minOccurs="0" name="nombreTabla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerVentasDias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="fecIni" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fecFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerVentasDiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EntidadesConsultas" minOccurs="0" name="LeerVentasDiasResult" nillable="true" type="q13:ArrayOfInfVentasClientesD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

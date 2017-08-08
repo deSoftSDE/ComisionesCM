@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ComisionesCM.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HostDSW" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">basicDSW</Value>
+    </Setting>
+    <Setting Name="HostConsultas" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">basicConsultas</Value>
+    </Setting>
+    <Setting Name="HostAuxiliar" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">basicAuxiliar</Value>
+    </Setting>
+    <Setting Name="Lenguaje" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ES</Value>
+    </Setting>
+    <Setting Name="TamanoPagina" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="HostWCF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">basic</Value>
+    </Setting>
+    <Setting Name="Repartos" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Previstos" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="USAT" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">37.230.70.13:6420</Value>
+    </Setting>
+    <Setting Name="ConfigurarConexion" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

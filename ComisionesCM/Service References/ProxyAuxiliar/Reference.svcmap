@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3bfc47d3-b2c5-4c92-af85-215b63fe2558" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SvcAuxiliarDSWin11.xsd" MetadataType="Schema" ID="cc64ef55-9cbd-4736-8d8d-8c09f73d19ba" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd3" />
+    <MetadataFile FileName="SvcAuxiliarDSWin111.xsd" MetadataType="Schema" ID="62eedddf-4a56-46ba-b63a-dd21128fe5ba" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd2" />
+    <MetadataFile FileName="SvcAuxiliarDSWin112.xsd" MetadataType="Schema" ID="2227233f-7c94-43d2-b84e-3388ccaf1dd1" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd10" />
+    <MetadataFile FileName="ServicioDSW1.wsdl" MetadataType="Wsdl" ID="12eaf589-01d3-4d0d-8c19-5de7e7126735" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?wsdl" />
+    <MetadataFile FileName="SvcAuxiliarDSWin1.disco" MetadataType="Disco" ID="39ed3b7e-3ca9-482d-805b-cce8c8e736fa" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?disco" />
+    <MetadataFile FileName="SvcAuxiliarDSWin113.xsd" MetadataType="Schema" ID="12d6eab1-01d9-4d16-80ed-1e551ca5fe6a" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd9" />
+    <MetadataFile FileName="SvcAuxiliarDSWin114.xsd" MetadataType="Schema" ID="f230a85f-b1ba-4989-baed-c812bb10172e" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd8" />
+    <MetadataFile FileName="SvcAuxiliarDSWin1.wsdl" MetadataType="Wsdl" ID="39324667-a6aa-472a-95ca-9bbf1b1d7bd2" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SvcAuxiliarDSWin115.xsd" MetadataType="Schema" ID="e211d7b7-4235-4edd-aa35-49019f12b7f8" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd5" />
+    <MetadataFile FileName="SvcAuxiliarDSWin116.xsd" MetadataType="Schema" ID="0f4173bc-9c1c-44df-984e-2862be93e2ba" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd4" />
+    <MetadataFile FileName="SvcAuxiliarDSWin117.xsd" MetadataType="Schema" ID="a0b45907-d044-48aa-a63a-5fd8c717c70d" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd7" />
+    <MetadataFile FileName="SvcAuxiliarDSWin118.xsd" MetadataType="Schema" ID="05b5b239-754e-4394-a277-a1bcda1e523d" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd6" />
+    <MetadataFile FileName="SvcAuxiliarDSWin119.xsd" MetadataType="Schema" ID="380caf05-a960-49a4-936a-b9aee6ea5c04" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd1" />
+    <MetadataFile FileName="SvcAuxiliarDSWin1110.xsd" MetadataType="Schema" ID="3f3b2667-bc8e-41c8-9a96-7a99b3ef4964" SourceId="1" SourceUrl="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

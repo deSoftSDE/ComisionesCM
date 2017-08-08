@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://deSoft.dSWinNetSvc" elementFormDefault="qualified" targetNamespace="http://deSoft.dSWinNetSvc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/dsCore.Security" />
+  <xs:import schemaLocation="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" />
+  <xs:import schemaLocation="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/dsCore.Tipos" />
+  <xs:import schemaLocation="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+  <xs:import schemaLocation="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://laptop-r293d132/SvcAuxiliarDSWin/SvcAuxiliarDSWin.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/dsCore.Buscador" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/dsCore.Security" minOccurs="0" name="LoginResult" nillable="true" type="q1:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginBasic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginBasicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/dsCore.Security" minOccurs="0" name="LoginBasicResult" nillable="true" type="q2:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/dsCore.Security" minOccurs="0" name="LoginAppResult" nillable="true" type="q3:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginAppBasic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginAppBasicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/dsCore.Security" minOccurs="0" name="LoginAppBasicResult" nillable="true" type="q4:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidarUsuarioResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarDatosConexion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="datosCon" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarDatosConexionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalvarInforme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="informe" nillable="true" type="q5:Informe" />
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalvarInformeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/dsCore.Tipos" minOccurs="0" name="SalvarInformeResult" nillable="true" type="q6:ResultadoIM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvocarInforme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="formulaseleccion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="formato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:int" />
+        <xs:element minOccurs="0" name="idEjercicio" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="parametrosInforme" nillable="true" type="q7:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvocarInformeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvocarInformeResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargarInforme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreListado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="impresora" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="plantilla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargarInformeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="CargarInformeResult" nillable="true" type="q8:MemoryStream" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarInforme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="informe" nillable="true" type="q9:MemoryStream" />
+        <xs:element minOccurs="0" name="nombreListado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarInformeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalvarOpcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="opcion" nillable="true" type="q10:Opcion" />
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalvarOpcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/dsCore.Tipos" minOccurs="0" name="SalvarOpcionResult" nillable="true" type="q11:ResultadoIM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerOpciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerOpcionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerOpcionesResult" nillable="true" type="q12:ArrayOfOpcion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerInformesXOpcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idOpcion" type="xs:int" />
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerInformesXOpcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerInformesXOpcionResult" nillable="true" type="q13:ArrayOfInforme" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerInformesXTipoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idTipoDocumento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerInformesXTipoDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerInformesXTipoDocumentoResult" nillable="true" type="q14:ArrayOfInforme" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalvarLayoutRejilla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="layoutRejilla" nillable="true" type="q15:LayoutRejilla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SalvarLayoutRejillaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="SalvarLayoutRejillaResult" nillable="true" type="q16:LayoutRejilla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerLayoutRejilla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idUsuario" type="q17:guid" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idAplicacion" type="q18:guid" />
+        <xs:element minOccurs="0" name="nombreRejilla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerLayoutRejillaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerLayoutRejillaResult" nillable="true" type="q19:LayoutRejilla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerLayoutsXUsuarioYAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idUsuario" type="q20:guid" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idAplicacion" type="q21:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerLayoutsXUsuarioYAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerLayoutsXUsuarioYAplicacionResult" nillable="true" type="q22:ArrayOfLayoutRejilla" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealizaConsultaSQL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="consulta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealizaConsultaSQLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="RealizaConsultaSQLResult" nillable="true" type="q23:ConsultaSQL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerLista">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/dsCore.Buscador" minOccurs="0" name="criterio" nillable="true" type="q24:CriterioBusqueda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerListaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/dsCore.Buscador" minOccurs="0" name="LeerListaResult" nillable="true" type="q25:ResultadoBusqueda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerUno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/dsCore.Buscador" minOccurs="0" name="entidad" nillable="true" type="q26:EntidadBusqueda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerUnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LeerUnoResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerVersionTabla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entidad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="baseDatos" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerVersionTablaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="LeerVersionTablaResult" nillable="true" type="q27:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargarParametrosUsuarioEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idEjercicio" nillable="true" type="xs:int" />
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idUsuario" type="q28:guid" />
+        <xs:element minOccurs="0" name="aplicacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CargarParametrosUsuarioEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="CargarParametrosUsuarioEmpresaResult" nillable="true" type="q29:ParamEmpreUsu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerRejillas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerRejillasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="LeerRejillasResult" nillable="true" type="q30:RejillasClasificadas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SincronizarTarifaProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="lineasProv" nillable="true" type="q31:ArrayOfLineaTarifaProveedor" />
+        <xs:element minOccurs="0" name="idProveedor" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SincronizarTarifaProveedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" minOccurs="0" name="SincronizarTarifaProveedorResult" nillable="true" type="q32:ArrayOfLineaTarifaProveedor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

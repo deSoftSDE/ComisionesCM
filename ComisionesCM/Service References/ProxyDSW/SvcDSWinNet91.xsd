@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/dsCore.Comun" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/dsCore.Comun" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/dsCore.Tipos" />
+  <xs:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="TipoDocumentoExterno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipoDocuExt" type="xs:int" />
+      <xs:element minOccurs="0" name="Imagen" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:base64Binary" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/dsCore.Tipos" minOccurs="0" name="TipoTrans" type="q1:TTipoTransaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoDocumentoExterno" nillable="true" type="tns:TipoDocumentoExterno" />
+  <xs:complexType name="ArrayOfDocumentoExterno">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentoExterno" nillable="true" type="tns:DocumentoExterno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentoExterno" nillable="true" type="tns:ArrayOfDocumentoExterno" />
+  <xs:complexType name="DocumentoExterno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Archivo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Entidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EsDocumentoNuevoOModificado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdDocumento" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEmpresa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdOrigen" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipoDocumento" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" type="ser:guid" />
+      <xs:element minOccurs="0" name="SoloLectura" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:base64Binary" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/dsCore.Tipos" minOccurs="0" name="TipoTrans" type="q2:TTipoTransaccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentoExterno" nillable="true" type="tns:DocumentoExterno" />
+</xs:schema>

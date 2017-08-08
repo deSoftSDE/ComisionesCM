@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SvcConsultasDSW" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" />
+      <xsd:import schemaLocation="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EntidadesConsultas" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISvcConsultasDSW_IniciarDatosConexion_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarDatosConexion" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_IniciarDatosConexion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarDatosConexionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerClientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerClientes" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerClientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerArticulos_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerArticulos" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerArticulos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerArticulosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_CrearComisiones_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearComisiones" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_CrearComisiones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearComisionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerCantidadesReparto_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerCantidadesReparto" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerCantidadesReparto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerCantidadesRepartoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerIncidenciasVentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerIncidenciasVentas" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerIncidenciasVentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerIncidenciasVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerIncidenciasRepartos_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerIncidenciasRepartos" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerIncidenciasRepartos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerIncidenciasRepartosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerVentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerVentas" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerVentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerVentasArti_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerVentasArti" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerVentasArti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerVentasArtiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerComisionesRepDet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerComisionesRepDet" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerComisionesRepDet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerComisionesRepDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerCompVC_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerCompVC" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerCompVC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerCompVCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerVentasDias_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerVentasDias" />
+  </wsdl:message>
+  <wsdl:message name="ISvcConsultasDSW_LeerVentasDias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerVentasDiasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISvcConsultasDSW">
+    <wsdl:operation name="IniciarDatosConexion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/IniciarDatosConexion" message="tns:ISvcConsultasDSW_IniciarDatosConexion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/IniciarDatosConexionResponse" message="tns:ISvcConsultasDSW_IniciarDatosConexion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerClientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerClientes" message="tns:ISvcConsultasDSW_LeerClientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerClientesResponse" message="tns:ISvcConsultasDSW_LeerClientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerArticulos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerArticulos" message="tns:ISvcConsultasDSW_LeerArticulos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerArticulosResponse" message="tns:ISvcConsultasDSW_LeerArticulos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearComisiones">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/CrearComisiones" message="tns:ISvcConsultasDSW_CrearComisiones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/CrearComisionesResponse" message="tns:ISvcConsultasDSW_CrearComisiones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerCantidadesReparto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerCantidadesReparto" message="tns:ISvcConsultasDSW_LeerCantidadesReparto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerCantidadesRepartoResponse" message="tns:ISvcConsultasDSW_LeerCantidadesReparto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerIncidenciasVentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerIncidenciasVentas" message="tns:ISvcConsultasDSW_LeerIncidenciasVentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerIncidenciasVentasResponse" message="tns:ISvcConsultasDSW_LeerIncidenciasVentas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerIncidenciasRepartos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerIncidenciasRepartos" message="tns:ISvcConsultasDSW_LeerIncidenciasRepartos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerIncidenciasRepartosResponse" message="tns:ISvcConsultasDSW_LeerIncidenciasRepartos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerVentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerVentas" message="tns:ISvcConsultasDSW_LeerVentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerVentasResponse" message="tns:ISvcConsultasDSW_LeerVentas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerVentasArti">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerVentasArti" message="tns:ISvcConsultasDSW_LeerVentasArti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerVentasArtiResponse" message="tns:ISvcConsultasDSW_LeerVentasArti_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerComisionesRepDet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerComisionesRepDet" message="tns:ISvcConsultasDSW_LeerComisionesRepDet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerComisionesRepDetResponse" message="tns:ISvcConsultasDSW_LeerComisionesRepDet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerCompVC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerCompVC" message="tns:ISvcConsultasDSW_LeerCompVC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerCompVCResponse" message="tns:ISvcConsultasDSW_LeerCompVC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerVentasDias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerVentasDias" message="tns:ISvcConsultasDSW_LeerVentasDias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISvcConsultasDSW/LeerVentasDiasResponse" message="tns:ISvcConsultasDSW_LeerVentasDias_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basic" type="tns:ISvcConsultasDSW">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IniciarDatosConexion">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/IniciarDatosConexion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerClientes">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerArticulos">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerArticulos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearComisiones">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/CrearComisiones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerCantidadesReparto">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerCantidadesReparto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerIncidenciasVentas">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerIncidenciasVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerIncidenciasRepartos">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerIncidenciasRepartos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerVentas">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerVentasArti">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerVentasArti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerComisionesRepDet">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerComisionesRepDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerCompVC">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerCompVC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerVentasDias">
+      <soap:operation soapAction="http://tempuri.org/ISvcConsultasDSW/LeerVentasDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SvcConsultasDSW">
+    <wsdl:port name="basic" binding="tns:basic">
+      <soap:address location="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

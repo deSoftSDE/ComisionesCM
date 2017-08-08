@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/dsCore.Buscador" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/dsCore.Buscador" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:import schemaLocation="http://laptop-r293d132/ServiciodSWinNet/SvcDSWinNet.svc?xsd=xsd8" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="CriterioBusqueda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseDatos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CampoClave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CampoOrdenacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CamposBusqueda" nillable="true" type="tns:ArrayOfCampoBusqueda" />
+      <xs:element minOccurs="0" name="Entidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntidadFuncion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntidadVista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdISOLang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumPagina" type="xs:int" />
+      <xs:element minOccurs="0" name="Operacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Paginacion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SqlWhere" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TamanoPagina" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoOrden" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorClave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorFuncion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idAlmacen" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="idDelegacion" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CriterioBusqueda" nillable="true" type="tns:CriterioBusqueda" />
+  <xs:complexType name="ArrayOfCampoBusqueda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CampoBusqueda" nillable="true" type="tns:CampoBusqueda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampoBusqueda" nillable="true" type="tns:ArrayOfCampoBusqueda" />
+  <xs:complexType name="CampoBusqueda">
+    <xs:sequence>
+      <xs:element name="_enlace" type="tns:TEnlace" />
+      <xs:element name="_nombreCampo" nillable="true" type="xs:string" />
+      <xs:element name="_operador" type="tns:TOperador" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" name="_tipo" type="q1:DbType" />
+      <xs:element name="_valor" nillable="true" type="xs:anyType" />
+      <xs:element name="_x003C_Hijos_x003E_k__BackingField" nillable="true" type="tns:ArrayOfCampoBusqueda" />
+      <xs:element name="_x003C_Padre_x003E_k__BackingField" nillable="true" type="tns:ArrayOfCampoBusqueda" />
+      <xs:element name="_x003C_Permanente_x003E_k__BackingField" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampoBusqueda" nillable="true" type="tns:CampoBusqueda" />
+  <xs:simpleType name="TEnlace">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Y" />
+      <xs:enumeration value="O" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TEnlace" nillable="true" type="tns:TEnlace" />
+  <xs:simpleType name="TOperador">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Igual" />
+      <xs:enumeration value="Distinto" />
+      <xs:enumeration value="Menor" />
+      <xs:enumeration value="Mayor" />
+      <xs:enumeration value="Comienza" />
+      <xs:enumeration value="Contiene" />
+      <xs:enumeration value="MenorOIgual" />
+      <xs:enumeration value="MayorOIgual" />
+      <xs:enumeration value="EsNulo" />
+      <xs:enumeration value="NoEsNulo" />
+      <xs:enumeration value="Esta_En" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TOperador" nillable="true" type="tns:TOperador" />
+  <xs:complexType name="ResultadoBusqueda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContadorResultados" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaResultados" nillable="true" type="q2:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="NumeroPaginas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultadoBusqueda" nillable="true" type="tns:ResultadoBusqueda" />
+  <xs:complexType name="EntidadBusqueda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Entidad" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="NombreEntidad" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntidadBusqueda" nillable="true" type="tns:EntidadBusqueda" />
+</xs:schema>

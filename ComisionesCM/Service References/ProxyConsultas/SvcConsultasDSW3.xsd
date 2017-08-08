@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EntidadesConsultas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EntidadesConsultas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://laptop-r293d132/SvcConsultasDSW/SvcConsultasDSW.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" />
+  <xs:complexType name="ArrayOfIncidenciaVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IncidenciaVentas" nillable="true" type="tns:IncidenciaVentas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIncidenciaVentas" nillable="true" type="tns:ArrayOfIncidenciaVentas" />
+  <xs:complexType name="IncidenciaVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCabAlba" type="xs:int" />
+      <xs:element minOccurs="0" name="IdDelegacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRuta" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRutaPrev" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdVendPrev" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdVendedor" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="InciRuta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InciVend" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IncidenciaVentas" nillable="true" type="tns:IncidenciaVentas" />
+  <xs:complexType name="ArrayOfIncidenciaReparto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IncidenciaReparto" nillable="true" type="tns:IncidenciaReparto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIncidenciaReparto" nillable="true" type="tns:ArrayOfIncidenciaReparto" />
+  <xs:complexType name="IncidenciaReparto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaReparto" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCabAlba" type="xs:int" />
+      <xs:element minOccurs="0" name="IdDelegacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdReparto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Incidencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reparto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IncidenciaReparto" nillable="true" type="tns:IncidenciaReparto" />
+  <xs:complexType name="ArrayOfVentasArti">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VentasArti" nillable="true" type="tns:VentasArti" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVentasArti" nillable="true" type="tns:ArrayOfVentasArti" />
+  <xs:complexType name="VentasArti">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CantidadUM" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CantidadUV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CantidadUVAlt" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdArticulo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdDelegacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFamilia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdGenerico" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSeccion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUdMan" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdVendedor" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImpCoste" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ImpVenta" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Orden" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VentasArti" nillable="true" type="tns:VentasArti" />
+  <xs:complexType name="FiltroCon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Años" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empleados" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Familias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FecF" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FecI" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdDelegacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdEmpresa" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Mes" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="MesF" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Secciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Series" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FiltroCon" nillable="true" type="tns:FiltroCon" />
+  <xs:complexType name="ArrayOfComisionRep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ComisionRep" nillable="true" type="tns:ComisionRep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComisionRep" nillable="true" type="tns:ArrayOfComisionRep" />
+  <xs:complexType name="ComisionRep">
+    <xs:sequence>
+      <xs:element name="_x003C_CantidadUV_x003E_k__BackingField" type="xs:decimal" />
+      <xs:element name="_x003C_DescArti_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Documento_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_FecDoc_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_IdArticulo_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_IdFamilia_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_IdPT_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_IdRep_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_IdSeccion_x003E_k__BackingField" nillable="true" type="xs:int" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_ImpCom_x003E_k__BackingField" type="xs:decimal" />
+      <xs:element name="_x003C_NR_x003E_k__BackingField" type="xs:short" />
+      <xs:element name="_x003C_Rep_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ValorCom_x003E_k__BackingField" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ComisionRep" nillable="true" type="tns:ComisionRep" />
+  <xs:complexType name="ArrayOfCompVC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompVC" nillable="true" type="tns:CompVC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompVC" nillable="true" type="tns:ArrayOfCompVC" />
+  <xs:complexType name="CompVC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Articulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CantidadUA" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CantidadUV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdArticulo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdDelegacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFamilia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdGenerico" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSeccion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Mes" type="xs:short" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompVC" nillable="true" type="tns:CompVC" />
+  <xs:complexType name="ArrayOfInfVentasClientesD">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfVentasClientesD" nillable="true" type="tns:InfVentasClientesD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfVentasClientesD" nillable="true" type="tns:ArrayOfInfVentasClientesD" />
+  <xs:complexType name="InfVentasClientesD">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/deSoft.dSWin.Entidades" base="q1:InfVentasClientes">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DiaM" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="DiaS" type="xs:unsignedByte" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InfVentasClientesD" nillable="true" type="tns:InfVentasClientesD" />
+</xs:schema>
