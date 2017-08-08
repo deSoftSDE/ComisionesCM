@@ -38,6 +38,7 @@ namespace ComisionesCM
 
         public static decimal ObjetoADecimal(object s)
         {
+
             if (s == null || s == System.DBNull.Value)
                 return 0;
             var str = s.ToString();
